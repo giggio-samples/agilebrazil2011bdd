@@ -1,0 +1,13 @@
+﻿<h2>Cálculo IR</h2>
+@using (Html.BeginForm("Calculo", "IR"))
+{
+    <div>
+        @Html.TextBox("Salario")<br />
+        <input type="submit" name="Calcule" />
+        @if (ViewBag.IR != null){
+            <p>
+                O valor é <span id="Resultado">@ViewBag.IR.ToString("f")</span>.
+            </p>
+        }
+    </div>
+}
